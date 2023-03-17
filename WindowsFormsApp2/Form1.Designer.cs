@@ -61,7 +61,7 @@
             this.existToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(2599, 48);
+            this.menuStrip1.Size = new System.Drawing.Size(2599, 42);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -69,36 +69,41 @@
             // 
             this.workerToolStripMenuItem.Name = "workerToolStripMenuItem";
             this.workerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.W)));
-            this.workerToolStripMenuItem.Size = new System.Drawing.Size(109, 35);
+            this.workerToolStripMenuItem.Size = new System.Drawing.Size(109, 38);
             this.workerToolStripMenuItem.Text = "&Woker";
+            this.workerToolStripMenuItem.Click += new System.EventHandler(this.workerToolStripMenuItem_Click);
             // 
             // customerToolStripMenuItem
             // 
             this.customerToolStripMenuItem.Name = "customerToolStripMenuItem";
             this.customerToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.C)));
-            this.customerToolStripMenuItem.Size = new System.Drawing.Size(145, 35);
+            this.customerToolStripMenuItem.Size = new System.Drawing.Size(145, 38);
             this.customerToolStripMenuItem.Text = "&Customer";
+            this.customerToolStripMenuItem.Click += new System.EventHandler(this.customerToolStripMenuItem_Click);
             // 
             // jobDetailsToolStripMenuItem
             // 
             this.jobDetailsToolStripMenuItem.Name = "jobDetailsToolStripMenuItem";
             this.jobDetailsToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.J)));
-            this.jobDetailsToolStripMenuItem.Size = new System.Drawing.Size(158, 35);
+            this.jobDetailsToolStripMenuItem.Size = new System.Drawing.Size(158, 38);
             this.jobDetailsToolStripMenuItem.Text = "&Job Details";
+            this.jobDetailsToolStripMenuItem.Click += new System.EventHandler(this.jobDetailsToolStripMenuItem_Click);
             // 
             // reportersToolStripMenuItem
             // 
             this.reportersToolStripMenuItem.Name = "reportersToolStripMenuItem";
             this.reportersToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.reportersToolStripMenuItem.Size = new System.Drawing.Size(146, 35);
+            this.reportersToolStripMenuItem.Size = new System.Drawing.Size(146, 38);
             this.reportersToolStripMenuItem.Text = "&Reporters";
+            this.reportersToolStripMenuItem.Click += new System.EventHandler(this.reportersToolStripMenuItem_Click);
             // 
             // existToolStripMenuItem
             // 
             this.existToolStripMenuItem.Name = "existToolStripMenuItem";
             this.existToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.X)));
-            this.existToolStripMenuItem.Size = new System.Drawing.Size(85, 35);
+            this.existToolStripMenuItem.Size = new System.Drawing.Size(85, 38);
             this.existToolStripMenuItem.Text = "&Exist";
+            this.existToolStripMenuItem.Click += new System.EventHandler(this.existToolStripMenuItem_Click);
             // 
             // Form1
             // 

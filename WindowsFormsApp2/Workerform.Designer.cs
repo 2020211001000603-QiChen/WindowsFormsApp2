@@ -28,13 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cMSDBDataSet = new WindowsFormsApp2.CMSDBDataSet();
+            this.cMSDBDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblWorkerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tblWorkerTableAdapter = new WindowsFormsApp2.CMSDBDataSetTableAdapters.tblWorkerTableAdapter();
+            this.workerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cMSDBDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cMSDBDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblWorkerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -88,13 +98,53 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.workerIDDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tblWorkerBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(55, 173);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 37;
             this.dataGridView1.Size = new System.Drawing.Size(634, 177);
             this.dataGridView1.TabIndex = 5;
+            // 
+            // cMSDBDataSet
+            // 
+            this.cMSDBDataSet.DataSetName = "CMSDBDataSet";
+            this.cMSDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // cMSDBDataSetBindingSource
+            // 
+            this.cMSDBDataSetBindingSource.DataSource = this.cMSDBDataSet;
+            this.cMSDBDataSetBindingSource.Position = 0;
+            // 
+            // tblWorkerBindingSource
+            // 
+            this.tblWorkerBindingSource.DataMember = "tblWorker";
+            this.tblWorkerBindingSource.DataSource = this.cMSDBDataSetBindingSource;
+            // 
+            // tblWorkerTableAdapter
+            // 
+            this.tblWorkerTableAdapter.ClearBeforeFill = true;
+            // 
+            // workerIDDataGridViewTextBoxColumn
+            // 
+            this.workerIDDataGridViewTextBoxColumn.DataPropertyName = "WorkerID";
+            this.workerIDDataGridViewTextBoxColumn.HeaderText = "WorkerID";
+            this.workerIDDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.workerIDDataGridViewTextBoxColumn.Name = "workerIDDataGridViewTextBoxColumn";
+            this.workerIDDataGridViewTextBoxColumn.Width = 200;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 10;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 200;
             // 
             // Workerform
             // 
@@ -109,7 +159,11 @@
             this.Controls.Add(this.label1);
             this.Name = "Workerform";
             this.Text = "Workerform";
+            this.Load += new System.EventHandler(this.Workerform_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cMSDBDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cMSDBDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tblWorkerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -123,5 +177,11 @@
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private CMSDBDataSet cMSDBDataSet;
+        private System.Windows.Forms.BindingSource cMSDBDataSetBindingSource;
+        private System.Windows.Forms.BindingSource tblWorkerBindingSource;
+        private CMSDBDataSetTableAdapters.tblWorkerTableAdapter tblWorkerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn workerIDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
     }
 }

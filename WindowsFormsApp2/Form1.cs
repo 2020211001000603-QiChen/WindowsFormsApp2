@@ -21,5 +21,34 @@ namespace WindowsFormsApp2
         {
 
         }
+
+        private void workerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Workerform workerform = new Workerform();
+            workerform.ShowDialog();
+        }
+
+        private void customerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Customerform customerform = new Customerform();
+            customerform.ShowDialog();
+        }
+
+        private void jobDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            JobDtailsform2 jobDtailsform2 = new JobDtailsform2();
+            jobDtailsform2.ShowDialog();
+        }
+
+        private void reportersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Reaporterform reaporterform = new Reaporterform();
+            reaporterform.ShowDialog();
+        }
+
+        private void existToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

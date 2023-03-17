@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCarNo = new System.Windows.Forms.Label();
             this.lblAddress = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -43,6 +44,8 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
+            this.errCustForm = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errCustForm)).BeginInit();
             this.SuspendLayout();
             // 
             // lblCarNo
@@ -122,27 +125,29 @@
             this.btnSave.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(119, 266);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(94, 30);
+            this.btnSave.Size = new System.Drawing.Size(100, 44);
             this.btnSave.TabIndex = 9;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnEdit
             // 
             this.btnEdit.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEdit.Location = new System.Drawing.Point(245, 266);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(93, 30);
+            this.btnEdit.Size = new System.Drawing.Size(102, 44);
             this.btnEdit.TabIndex = 10;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
             // 
             // btnCancel
             // 
             this.btnCancel.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancel.Location = new System.Drawing.Point(371, 266);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(97, 30);
+            this.btnCancel.Size = new System.Drawing.Size(101, 44);
             this.btnCancel.TabIndex = 11;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
@@ -151,10 +156,11 @@
             // 
             this.btnExit.Location = new System.Drawing.Point(488, 266);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(91, 30);
+            this.btnExit.Size = new System.Drawing.Size(103, 44);
             this.btnExit.TabIndex = 12;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnPrevious
             // 
@@ -173,6 +179,10 @@
             this.btnNext.TabIndex = 14;
             this.btnNext.Text = "Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            // 
+            // errCustForm
+            // 
+            this.errCustForm.ContainerControl = this;
             // 
             // Customerform
             // 
@@ -196,6 +206,8 @@
             this.Controls.Add(this.lblCarNo);
             this.Name = "Customerform";
             this.Text = "Customerform";
+            this.Load += new System.EventHandler(this.Customerform_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errCustForm)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,5 +230,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.ErrorProvider errCustForm;
     }
 }
